@@ -1,4 +1,5 @@
-# StudyFst
-Some records maybe? Hope that it won't stop the steps.
-Nice to meet you and after all ---
---- ' HELLO WORLD '
+# NOTREADME
+
+**NOTHING IMPORTANT**
+
+所以谁来告诉我树分解到底是什么牛马
