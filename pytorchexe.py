@@ -66,5 +66,14 @@ for epoch in range(10):#进行10个周期
 with torch.no_grad():#喜报，把backward禁了
 	for inputs,labels in test_loader:
 		outputs = model(inputs)
-		print(inputs)
-		print(outputs)
+		#print(inputs)
+		#print(outputs)
+		_,predicted = torch.max(outputs.data,1)
+		#predicted（1）最终会呈现出相对应的概率，而（2）则是其对应的索引（含零），‘_’的作用是舍弃第一个值，只取（2）
+		#print(predicted)
+		total += label.size(0)
+		correct += (predicted == labels).sum().item()
+		#'.sum()'计算满足此if的数量，'.item()'作用同int()
+
+acc = correct/total
+print(acc)
